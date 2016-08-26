@@ -78,60 +78,88 @@
 			</li>
 	</section>
 
+	<section class="slide">
+		<h2>Термины</h2>
+
+		<ul>
+			<li><b>grid container</b> — грид-контейнер</li>
+			<li><b>grid item</b> — грид-элемент</li>
+			<li><b>grid track</b> — грид-полоса</li>
+			<li><b>grid cell</b> — грид-ячейка</li>
+			<li><b>grid line</b> — грид-линия</li>
+			<li><b>grid area</b> — грид-область</li>
+		</ul>
+
+		<p>Подробнее в <a href="https://github.com/web-standards-ru/dictionary/blob/master/dictionary.md#grid-layout">словаре терминов по фронтенду</a>.</p>
+
+	</section>
+
 
 	<section class="slide">
-		<h2>1. Создаём grid-контейнер</h2>
+		<h2>Создаём grid-контейнер</h2>
 		<pre>
-			<code class="css">.grid-container {</code>
-			<code class="css">	display: grid;</code>
+			<code class="css">.grid {</code>
+			<code class="css">	display: <mark>grid</mark>;</code>
 			<code class="css">}</code>
 		</pre>
 	</section>
 
 
 	<section class="slide">
-		<h2>2. Рисуем виртуальную сетку</h2>
-
-		<pre>
-			<code class="css">.grid-container {</code>
-			<code class="css">	display: grid;</code>
-			<code class="css">	grid-template-columns: 250px 1fr 150px;</code>
-			<code class="css">	grid-template-rows: 100px 100px 100px;</code>
-			<code class="css">}</code>
-		</pre>
-
+		<h2 class="shout">Создаём колонки</h2>
 	</section>
 
+	<section class="slide">
+		<h2>Делим пополам</h2>
+		<pre>
+			<code class="css">.grid {</code>
+			<code class="css">	display: grid;</code>
+			<code class="css">	grid-template-columns: <mark>1fr 1fr</mark>;</code>
+			<code class="css">}</code>
+		</pre>
+	</section>
 
 	<section class="slide">
 		<iframe
-			height='375'
+			height='400'
 			scrolling='no'
-			src='//codepen.io/r3nya/embed/Pzrovp/?height=429&theme-id=light&default-tab=result&embed-version=2'
-			frameborder='no' allowtransparency='true'
-			allowfullscreen='true' style='width: 100%;'>
-				See the Pen <a href='http://codepen.io/r3nya/pen/Pzrovp/'>grid_state_1</a> by Andrew M. (<a href='http://codepen.io/r3nya'>@r3nya</a>) on <a href='http://codepen.io'>CodePen</a>.
+			src='//codepen.io/r3nya/embed/jAgbrB/?height=400&theme-id=light&default-tab=result&embed-version=2'
+			frameborder='no' allowtransparency='true' allowfullscreen='true'
+			style='width: 100%;'>
+				See the Pen <a href='http://codepen.io/r3nya/pen/jAgbrB/'>grid__columns__half</a> by Andrew M. (<a href='http://codepen.io/r3nya'>@r3nya</a>) on <a href='http://codepen.io'>CodePen</a>.
 		</iframe>
 	</section>
 
-
 	<section class="slide">
 		<iframe
-			height='375'
+			height='406'
 			scrolling='no'
-			src='//codepen.io/r3nya/embed/XKvJNL/?height=371&theme-id=light&default-tab=result&embed-version=2' frameborder='no'
+			src='//codepen.io/r3nya/embed/rLXOjY/?height=406&theme-id=light&default-tab=result&embed-version=2' frameborder='no'
 			allowtransparency='true' allowfullscreen='true' style='width: 100%;'>
-				See the Pen <a href='http://codepen.io/r3nya/pen/XKvJNL/'>grid_state_2</a> by Andrew M. (<a href='http://codepen.io/r3nya'>@r3nya</a>) on <a href='http://codepen.io'>CodePen</a>.
+				See the Pen <a href='http://codepen.io/r3nya/pen/rLXOjY/'>grid__columns__half__2</a> by Andrew M. (<a href='http://codepen.io/r3nya'>@r3nya</a>) on <a href='http://codepen.io'>CodePen</a>.
 		</iframe>
 	</section>
 
+
+	<section class="slide">
+		<h2>А теперь на три…</h2>
+		<pre>
+			<code class="css">.grid {</code>
+			<code class="css">	display: grid;</code>
+			<code class="css">	grid-template-columns: <mark>1fr 1fr 1fr</mark>;</code>
+			<code class="css">}</code>
+		</pre>
+	</section>
+
+
 	<section class="slide">
 		<iframe
-			height='375'
+			height='396'
 			scrolling='no'
-			src='//codepen.io/r3nya/embed/QEZwpB/?height=375&theme-id=light&default-tab=result&embed-version=2'
-			frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>
-				See the Pen <a href='http://codepen.io/r3nya/pen/QEZwpB/'>grid_state_3</a> by Andrew M. (<a href='http://codepen.io/r3nya'>@r3nya</a>) on <a href='http://codepen.io'>CodePen</a>.
+			src='//codepen.io/r3nya/embed/wWVKZz/?height=396&theme-id=light&default-tab=result&embed-version=2'
+			frameborder='no' allowtransparency='true' allowfullscreen='true'
+			style='width: 100%;'>
+				See the Pen <a href='http://codepen.io/r3nya/pen/wWVKZz/'>grid__columns__trio</a> by Andrew M. (<a href='http://codepen.io/r3nya'>@r3nya</a>) on <a href='http://codepen.io'>CodePen</a>.
 		</iframe>
 	</section>
 
@@ -150,6 +178,7 @@
 		</iframe>
 	</section>
 
+
 	<section class="slide">
 		<h2 class="fr">:3</h2>
 		<img src="pictures/fr-fr-fr.jpg" alt=":3" class="cover">
@@ -165,7 +194,232 @@
 	</section>
 
 	<section class="slide">
-		
+		<h2 class="shout">Создаём колонки</h2>
+	</section>
+
+	<section class="slide">
+		<h2>Фиксированный размер и всё остальное</h2>
+		<pre>
+			<code class="css">.grid {</code>
+			<code class="css">	display: grid;</code>
+			<code class="css">	grid-template-<mark>columns</mark>: <mark>80px 1fr 80px</mark>;</code>
+			<code class="css">	grid-template-<mark>rows</mark>: <mark>80px 1fr 80px</mark>;</code>
+			<code class="css">}</code>
+		</pre>
+	</section>
+
+
+	<section class="slide">
+		<iframe
+			height='430'
+			scrolling='no'
+			src='//codepen.io/r3nya/embed/yJmYPp/?height=430&theme-id=light&default-tab=result&embed-version=2'
+			frameborder='no' allowtransparency='true' allowfullscreen='true'
+			style='width: 100%;'>
+				See the Pen <a href='http://codepen.io/r3nya/pen/yJmYPp/'>grid__columns__trio_w_rows</a> by Andrew M. (<a href='http://codepen.io/r3nya'>@r3nya</a>) on <a href='http://codepen.io'>CodePen</a>.
+		</iframe>
+	</section>
+
+
+	<section class="slide">
+		<h2 class="shout">Вручную … 🕶</h2>
+	</section>
+
+
+	<section class="slide">
+		<h2>3 колонки</h2>
+		<pre>
+			<code class="css">.grid {</code>
+			<code class="css">	display: grid;</code>
+			<code class="css">	grid-template-columns: <mark>1fr 1fr 1fr</mark>;</code>
+			<code class="css">}</code>
+		</pre>
+	</section>
+
+	<section class="slide">
+		<iframe
+			height='415'
+			scrolling='no'
+			src='//codepen.io/r3nya/embed/RRXWyP/?height=415&theme-id=light&default-tab=result&embed-version=2'
+			frameborder='no' allowtransparency='true' allowfullscreen='true'
+			style='width: 100%;'>
+				See the Pen <a href='http://codepen.io/r3nya/pen/RRXWyP/'>grid__columns__trio__default</a> by Andrew M. (<a href='http://codepen.io/r3nya'>@r3nya</a>) on <a href='http://codepen.io'>CodePen</a>.
+		</iframe>
+	</section>
+
+
+	<section class="slide">
+		<h2>Добавляем шапку и подвал</h2>
+
+		<pre>
+			<code class="css">.grid :nth-child(1) {</code>
+			<code class="css">	grid-column: <mark>1 / 4</mark>;</code>
+			<code class="css">}</code>
+			<code class="css">.grid :nth-child(5) {</code>
+			<code class="css">	grid-column: <mark>1 / 4</mark>;</code>
+			<code class="css">}</code>
+		</pre>
+	</section>
+
+
+	<section class="slide">
+		<iframe
+			height='408'
+			scrolling='no'
+			src='//codepen.io/r3nya/embed/AXZWdP/?height=408&theme-id=light&default-tab=result&embed-version=2'
+			frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>
+				See the Pen <a href='http://codepen.io/r3nya/pen/AXZWdP/'>grid__columns__header__footer</a> by Andrew M. (<a href='http://codepen.io/r3nya'>@r3nya</a>) on <a href='http://codepen.io'>CodePen</a>.
+		</iframe>
+	</section>
+
+
+	<section class="slide">
+		<img src="pictures/Bill.png" alt="Bill" class="cover bill">
+
+		<style>
+			.slide .bill {
+				max-width: none;
+			}
+		</style>
+	</section>
+
+
+	<section class="slide">
+		<h2>ASCII</h2>
+
+		<pre>
+			<code class="css">.grid {</code>
+			<code class="css">	grid-template-areas:</code>
+			<code class="css">		<mark>'a a a a'</mark></code>
+			<code class="css">		'b <mark class="important">c c</mark> b' <span class="comment">/* Шаблон области */</span></code>
+			<code class="css">		<mark>'e e e e';</mark></code>
+			<code class="css">}</code>
+		</pre>
+	</section>
+
+
+	<section class="slide">
+		<h2>a b c d e</h2>
+
+		<pre>
+			<code class="css">.grid :nth-child(<mark>1</mark>) { grid-area: <mark>a</mark>; }</code>
+			<code class="css">.grid :nth-child(<mark>2</mark>) { grid-area: <mark>b</mark>; }</code>
+			<code class="css">.grid :nth-child(<mark>3</mark>) { grid-area: <mark>c</mark>; }</code>
+			<code class="css">.grid :nth-child(<mark>4</mark>) { grid-area: <mark>d</mark>; }</code>
+			<code class="css">.grid :nth-child(<mark>5</mark>) { grid-area: <mark>e</mark>; }</code>
+		</pre>
+	</section>
+
+
+	<section class="slide">
+		<iframe
+			height='405'
+			scrolling='no'
+			src='//codepen.io/r3nya/embed/rLXxBq/?height=405&theme-id=light&default-tab=result&embed-version=2'
+			frameborder='no' allowtransparency='true' allowfullscreen='true'
+			style='width: 100%;'>
+				See the Pen <a href='http://codepen.io/r3nya/pen/rLXxBq/'>grid__columns__ascii_v1</a> by Andrew M. (<a href='http://codepen.io/r3nya'>@r3nya</a>) on <a href='http://codepen.io'>CodePen</a>.
+		</iframe>
+	</section>
+
+
+	<section class="slide">
+		<h2>ASCII</h2>
+
+		<pre>
+			<code class="css">.grid {</code>
+			<code class="css">	grid-template-areas:</code>
+			<code class="css">		'a a a a'</code>
+			<code class="css">		<mark>'b c c b'</mark></code>
+			<code class="css">		<mark>'b c c b'</mark></code>
+			<code class="css">		'e e e e';</code>
+			<code class="css">}</code>
+		</pre>
+	</section>
+
+	<section class="slide">
+		<iframe
+			height='414'
+			scrolling='no'
+			src='//codepen.io/r3nya/embed/JKgGdP/?height=414&theme-id=light&default-tab=result&embed-version=2'
+			frameborder='no' allowtransparency='true' allowfullscreen='true'
+			style='width: 100%;'>
+				See the Pen <a href='http://codepen.io/r3nya/pen/JKgGdP/'>grid__columns__ascii_v2</a> by Andrew M. (<a href='http://codepen.io/r3nya'>@r3nya</a>) on <a href='http://codepen.io'>CodePen</a>.
+		</iframe>
+	</section>
+
+	<section class="slide">
+		<pre class="place" style="font-size: 40px">			<code><mark>.grid</mark> {</code>
+			<code class="css">	grid-template-areas:</code>
+			<code class="css">		'🐷 🐷 🐷 🐷'</code>
+			<code class="css">		'🐸 🤖 🤖 🔫'</code>
+			<code class="css">		'🐵 🐵 🐵 🐵';</code>
+			<code class="css">	}</code>
+		</pre>
+	</section>
+
+
+	<section class="slide">
+		<h2>Рисуем виртуальную сетку</h2>
+
+		<pre>
+			<code class="css">.grid-container {</code>
+			<code class="css">	display: grid;</code>
+			<code class="css">	grid-template-columns: 250px 1fr 150px;</code>
+			<code class="css">	grid-template-rows: 100px 100px 100px;</code>
+			<code class="css">}</code>
+		</pre>
+
+	</section>
+
+
+	<section class="slide">
+		<iframe
+			height='375'
+			scrolling='no'
+			src='//codepen.io/r3nya/embed/Pzrovp/?height=375&theme-id=light&default-tab=result&embed-version=2'
+			frameborder='no' allowtransparency='true'
+			allowfullscreen='true' style='width: 100%;'>
+				See the Pen <a href='http://codepen.io/r3nya/pen/Pzrovp/'>grid_state_1</a> by Andrew M. (<a href='http://codepen.io/r3nya'>@r3nya</a>) on <a href='http://codepen.io'>CodePen</a>.
+		</iframe>
+	</section>
+
+
+	<section class="slide">
+		<iframe
+			height='375'
+			scrolling='no'
+			src='//codepen.io/r3nya/embed/XKvJNL/?height=375&theme-id=light&default-tab=result&embed-version=2' frameborder='no'
+			allowtransparency='true' allowfullscreen='true' style='width: 100%;'>
+				See the Pen <a href='http://codepen.io/r3nya/pen/XKvJNL/'>grid_state_2</a> by Andrew M. (<a href='http://codepen.io/r3nya'>@r3nya</a>) on <a href='http://codepen.io'>CodePen</a>.
+		</iframe>
+	</section>
+
+	<section class="slide">
+		<iframe
+			height='375'
+			scrolling='no'
+			src='//codepen.io/r3nya/embed/QEZwpB/?height=375&theme-id=light&default-tab=result&embed-version=2'
+			frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>
+				See the Pen <a href='http://codepen.io/r3nya/pen/QEZwpB/'>grid_state_3</a> by Andrew M. (<a href='http://codepen.io/r3nya'>@r3nya</a>) on <a href='http://codepen.io'>CodePen</a>.
+		</iframe>
+	</section>
+
+
+	<section class="slide">
+	</section>
+
+	<section class="slide">
+		<h2>Крепим блоки</h2>
+
+		<img src="pictures/grid.jpg" alt="grid" class="place r pic">
+
+		<style>
+			.slide .pic {
+				width: 50%;
+			}
+		</style>
+
 	</section>
 
 
