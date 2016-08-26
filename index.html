@@ -209,7 +209,98 @@
 
 
 	<section class="slide">
-		<h2 class="shout">Вручную … 🕶</h2>
+		<div class="left">
+			<h2>Грид-линии</h2>
+
+			<pre>
+				<code>.grid {</code>
+				<code class="css">	grid-column-start: 3;</code>
+				<code class="css">	grid-column-end: 4;</code>
+				<code class="css">	grid-row-start: 2;</code>
+				<code class="css">	grid-row-end: 4;</code>
+				<code class="css">}</code>
+			</pre>
+		</div>
+
+		<div class="right">
+			<iframe
+				height='416'
+				scrolling='no'
+				src='//codepen.io/r3nya/embed/AXZvmr/?height=416&theme-id=light&default-tab=result&embed-version=2'
+				frameborder='no' allowtransparency='true' allowfullscreen='true'
+				style='width: 100%;'>
+					See the Pen <a href='http://codepen.io/r3nya/pen/AXZvmr/'>grid_3x3</a> by Andrew M. (<a href='http://codepen.io/r3nya'>@r3nya</a>) on <a href='http://codepen.io'>CodePen</a>.
+			</iframe>
+		</div>
+
+		<style>
+			.slide .left {
+				float: left;
+				width: 50%;
+			}
+
+			.slide .right {
+				float: right;
+				width: 50%;
+			}
+		</style>
+	</section>
+
+
+	<section class="slide">
+		<div class="left">
+			<h2>Грид-линии</h2>
+
+			<pre>
+				<code>.grid {</code>
+				<code class="css">	grid-column: <mark>3 / 4</mark>;</code>
+				<code class="css">	grid-row: <mark>2 / 4</mark>;</code>
+				<code class="css">}</code>
+			</pre>
+		</div>
+
+		<div class="right">
+			<iframe
+				height='416'
+				scrolling='no'
+				src='//codepen.io/r3nya/embed/AXZvmr/?height=416&theme-id=light&default-tab=result&embed-version=2'
+				frameborder='no' allowtransparency='true' allowfullscreen='true'
+				style='width: 100%;'>
+					See the Pen <a href='http://codepen.io/r3nya/pen/AXZvmr/'>grid_3x3</a> by Andrew M. (<a href='http://codepen.io/r3nya'>@r3nya</a>) on <a href='http://codepen.io'>CodePen</a>.
+			</iframe>
+		</div>
+
+	</section>
+
+
+	<section class="slide">
+		<div class="left">
+			<h2>Грид-линии</h2>
+
+			<pre>
+				<code>.grid {</code>
+				<code class="css">	grid-column: 3 / 4;</code>
+				<code class="css">	grid-row: 2 / <mark>span</mark> 2;</code>
+				<code class="css">}</code>
+			</pre>
+		</div>
+
+		<div class="right">
+			<iframe
+				height='416'
+				scrolling='no'
+				src='//codepen.io/r3nya/embed/AXZvmr/?height=416&theme-id=light&default-tab=result&embed-version=2'
+				frameborder='no' allowtransparency='true' allowfullscreen='true'
+				style='width: 100%;'>
+					See the Pen <a href='http://codepen.io/r3nya/pen/AXZvmr/'>grid_3x3</a> by Andrew M. (<a href='http://codepen.io/r3nya'>@r3nya</a>) on <a href='http://codepen.io'>CodePen</a>.
+			</iframe>
+		</div>
+
+	</section>
+
+
+	<section class="slide">
+		<h2 class="shout">Разметка вручную 🕶</h2>
 	</section>
 
 
@@ -351,8 +442,10 @@
 		</iframe>
 	</section>
 
+
 	<section class="slide">
-		<pre class="place" style="font-size: 40px">			<code><mark>.grid</mark> {</code>
+		<pre class="place" style="font-size: 40px">
+			<code><mark>.grid</mark> {</code>
 			<code class="css">	grid-template-areas:</code>
 			<code class="css">		'🐷 🐷 🐷 🐷'</code>
 			<code class="css">		'🐸 🤖 🤖 🔫'</code>
@@ -361,7 +454,6 @@
 			<code class="css">}</code>
 		</pre>
 	</section>
-
 
 	<section class="slide">
 		<h2>Рисуем виртуальную сетку</h2>
