@@ -1,3 +1,0 @@
-# CSS Grid Layout
-
-Welcome! ;)
