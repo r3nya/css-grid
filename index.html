@@ -20,8 +20,8 @@
 		<style>
 			#cover {
 				background-size: 64px 64px;
-    			background-image: repeating-linear-gradient( to bottom, #e4e4e4, #e4e4e4 2px, transparent 2px, transparent 64px),
-								repeating-linear-gradient( to right, #e4e4e4, #e4e4e4 2px, transparent 2px, transparent 64px);
+    			background-image: repeating-linear-gradient( to bottom, #f1f1f1, #f1f1f1 2px, transparent 2px, transparent 64px),
+								repeating-linear-gradient( to right, #f1f1f1, #f1f1f1 2px, transparent 2px, transparent 64px);
 			}
 			#cover h2 {
 				margin:30px 0 0;
@@ -66,7 +66,7 @@
 
 	<section class="slide">
 		<h2>Хочу попробовать</h2>
-		<ol>
+		<ul>
 			<li>
 				<b>Chrome:</b> <a href="chrome://flags/#enable-experimental-web-platform-features">chrome://flags/#enable-experimental-web-platform-features</a>
 			</li>
@@ -76,22 +76,9 @@
 			<li>
 				<b>Firefox:</b> <a href="about:config">about:config</a> — layout.css.grid.enabled
 			</li>
-	</section>
-
-	<section class="slide">
-		<h2>Термины</h2>
-
-		<ul>
-			<li><b>grid container</b> — грид-контейнер</li>
-			<li><b>grid item</b> — грид-элемент</li>
-			<li><b>grid track</b> — грид-полоса</li>
-			<li><b>grid cell</b> — грид-ячейка</li>
-			<li><b>grid line</b> — грид-линия</li>
-			<li><b>grid area</b> — грид-область</li>
+			<hr>
+			<li><a href="https://github.com/FremyCompany/css-grid-polyfill">CSS Grid Polyfill</a></li>
 		</ul>
-
-		<p>Подробнее в <a href="https://github.com/web-standards-ru/dictionary/blob/master/dictionary.md#grid-layout">словаре терминов по фронтенду</a>.</p>
-
 	</section>
 
 
@@ -355,6 +342,7 @@
 			<code class="css">		'🐸 🤖 🤖 🔫'</code>
 			<code class="css">		'🐵 🐵 🐵 🐵';</code>
 			<code class="css">	}</code>
+			<code class="css">}</code>
 		</pre>
 	</section>
 
@@ -365,8 +353,8 @@
 		<pre>
 			<code class="css">.grid-container {</code>
 			<code class="css">	display: grid;</code>
-			<code class="css">	grid-template-columns: 250px 1fr 150px;</code>
-			<code class="css">	grid-template-rows: 100px 100px 100px;</code>
+			<code class="css">	grid-template-columns: <mark>250px 1fr 150px</mark>;</code>
+			<code class="css">	grid-template-rows: <mark>100px 100px 100px</mark>;</code>
 			<code class="css">}</code>
 		</pre>
 
@@ -374,6 +362,10 @@
 
 
 	<section class="slide">
+		<pre>
+			<code class="css">.grid__element { grid-column: 1; grid-row: 1; }</code>
+		</pre>
+
 		<iframe
 			height='375'
 			scrolling='no'
@@ -386,6 +378,9 @@
 
 
 	<section class="slide">
+		<pre>
+			<code class="css">.grid__element { grid-column: 2/4; grid-row: 2/4; }</code>
+		</pre>
 		<iframe
 			height='375'
 			scrolling='no'
@@ -396,6 +391,7 @@
 	</section>
 
 	<section class="slide">
+		<h2>Перекрытие блоков</h2>
 		<iframe
 			height='375'
 			scrolling='no'
@@ -407,136 +403,110 @@
 
 
 	<section class="slide">
-	</section>
+		<h2>Выравнивание блоков</h2>
 
-	<section class="slide">
-		<h2>Крепим блоки</h2>
-
-		<img src="pictures/grid.jpg" alt="grid" class="place r pic">
-
-		<style>
-			.slide .pic {
-				width: 50%;
-			}
-		</style>
-
-	</section>
-
-
-	<section class="slide">
-		<h2>Two columns if you like</h2>
-		<p class="double">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>
-	</section>
-	<section class="slide">
-		<h2>All kind of lists</h2>
-		<ol>
-			<li>Simple lists are marked with bullets</li>
-			<li>Ordered lists begin with a number</li>
-			<li>You can even nest lists one inside another
-				<ul>
-					<li>Or mix their types</li>
-					<li>But do not go too far</li>
-					<li>Otherwise audience will be bored</li>
-				</ul>
-			</li>
-			<li>Look, seven rows exactly!</li>
-		</ol>
-	</section>
-	<section class="slide">
-		<h2>Serious citations</h2>
-		<figure>
-			<blockquote>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>
-			</blockquote>
-			<figcaption>Marcus Tullius Cicero</figcaption>
-		</figure>
-	</section>
-	<section class="slide">
-		<h2>Code samples</h2>
-		<pre>
-			<code>&lt;!DOCTYPE html&gt;</code>
-			<code class="mark">&lt;html lang="en"&gt;</code>
-			<code><mark>&lt;head&gt;</mark> <span class="comment">&lt;!--Comment--&gt;</span></code>
-			<code>    &lt;title&gt;Shower&lt;/title&gt;</code>
-			<code>    &lt;meta charset="<mark class="important">UTF-8</mark>"&gt;</code>
-			<code>    &lt;link rel="stylesheet" href="screen.css"&gt;</code>
-			<code><mark>&lt;/head&gt;</mark></code>
-		</pre>
-	</section>
-	<section class="slide">
-		<h2>Even tables</h2>
 		<table>
-		<tr>
-			<th scope="col">Locavore</th>
-			<th>Umami</th>
-			<th>Helvetica</th>
-			<th>Vegan</th>
-		</tr>
-		<tr>
-			<th scope="row">Fingerstache</th>
-			<td>Kale</td>
-			<td>Chips</td>
-			<td>Keytar</td>
-		</tr>
-		<tr>
-			<th scope="row">Sriracha</th>
-			<td>Gluten-free</td>
-			<td>Ennui</td>
-			<td>Keffiyeh</td>
-		</tr>
-		<tr>
-			<th scope="row">Thundercats</th>
-			<td>Jean</td>
-			<td>Shorts</td>
-			<td>Biodiesel</td>
-		</tr>
-		<tr>
-			<th scope="row">Terry</th>
-			<td>Richardson</td>
-			<td>Swag</td>
-			<td>Blog</td>
-		</tr>
+			<tbody>
+			<tr>
+				<th scope="col">Грид-контейнер</th>
+				<th>Грид-элемент</th>
+			</tr>
+			<tr>
+				<td><code>align-items</code></td>
+				<td><code>align-self</code></td>
+			</tr>
+			<tr>
+				<td><code>justify-items</code></td>
+				<td><code>justify-self</code></td>
+			</tr>
+			</tbody>
 		</table>
-		<p>It’s good to have information organized.</p>
 	</section>
-	<section class="slide" id="picture">
-		<h2>Pictures</h2>
-		<img src="pictures/picture.jpg" alt="" class="cover">
-		<style>
-			#picture h2 {
-				color:#FFF;
-				}
-		</style>
-	</section>
+
+
 	<section class="slide">
-		<h2 class="shout shrink">You can even shout this way</h2>
+		<h2>Отступы</h2>
+
+		<table>
+			<tbody>
+			<tr>
+				<th scope="col">Авто</th>
+				<th>Вручную</th>
+			</tr>
+			<tr>
+				<td><code>align-content</code></td>
+				<td><code>grid-row-gap</code></td>
+			</tr>
+			<tr>
+				<td><code>justify-content</code></td>
+				<td><code>grid-column-gap</code></td>
+			</tr>
+			</tbody>
+		</table>
 	</section>
+
 	<section class="slide">
-		<h2>Inner navigation</h2>
-		<ol>
-			<li>Lets you reveal list items one by one</li>
-			<li class="next">To keep some key points</li>
-			<li class="next">In secret from audience</li>
-			<li class="next">But it will work only once</li>
-			<li class="next">Nobody wants to see the same joke twice</li>
-		</ol>
+		<h2>MOAR примеров</h2>
+
+		<ul>
+			<li>
+				<a href="http://gridbyexample.com/">gridbyexample.com</a>
+			</li>
+			<li>
+				<a href="https://igalia.github.io/css-grid-layout/index.html">CSS Grid Layout Examples</a>
+			</li>
+			<li>
+				<a href="https://hacks.mozilla.org/2015/09/the-future-of-layout-with-css-grid-layouts/">Шикарный пример с dribbble</a>
+			</li>
+		</ul>
 	</section>
-	<section class="slide grid">
-		<h2>All nicely aligned to grid</h2>
+
+
+	<section class="slide">
+		<h2>Чтиво на ночь … 🌙</h2>
+
+		<ul>
+			<li>
+				(EN) <a href="https://abookapart.com/products/get-ready-for-css-grid-layout">«Get Ready for CSS Grid Layout»</a>
+			</li>
+			<li>
+				(EN) <a href="http://blogs.igalia.com/mrego/tag/css-grid-layout/">Блог Мануэля Рего</a>
+			</li>
+			<li>
+				(EN) <a href="https://css-tricks.com/snippets/css/complete-guide-grid/">A Complete Guide to Grid</a>
+			</li>
+			<li>
+				(RU) <a href="http://css-live.ru/tag/css3-grid-layout">Статьи и переводы CSS-live.ru</a>
+			</li>
+		</ul>
 	</section>
-	<section class="slide" id="see-more">
+
+
+	<section class="slide">
+		<h2>Что посмотреть … 🖥</h2>
+
+		<ul>
+			<li>
+                (EN) <a href="https://www.youtube.com/watch?v=Felq4z_rdPQ">Start using CSS Grid Layout</a> - Rachel Andrew
+            </li>
+            <li>
+                (EN)
+                <a href="https://www.youtube.com/watch?v=3M_rbUYtWzk">CSS Grid Layout from the inside out</a> - Manuel Rego, Igalia
+            </li>
+            <li>
+                (RU) <a href="https://www.youtube.com/watch?v=JoRVUILXLxU">Можно вообще всё. Раскладка по гриду</a> - Вадим Макеев
+            </li>
+        </ul>
+	</section>
+
+	<section class="slide" id="bb">
 		<h2 class="shout">
-			<img src="pictures/logo.svg" alt="Shower logo">
-			<a href="https://github.com/shower/shower">See more on GitHub</a>
+			<a href="http://r3nya.ru">@r3nya</a>
 		</h2>
 		<style>
-			#see-more h2 {
+			#bb h2 {
 				font-size:100px
-				}
-			#see-more img {
-				width:0.72em;
-				height:0.72em;
-				}
+			}
 		</style>
 	</section>
 
