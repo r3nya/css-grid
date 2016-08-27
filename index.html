@@ -180,6 +180,23 @@
 		</style>
 	</section>
 
+
+	<section class="slide">
+		<pre>
+			<code class="css">.grid { grid-template-columns: <mark>repeat(6, 1fr)</mark>; }</code>
+		</pre>
+
+		<iframe
+			height='390'
+			scrolling='no'
+			src='//codepen.io/r3nya/embed/kXObPr/?height=390&theme-id=light&default-tab=result&embed-version=2'
+			frameborder='no' allowtransparency='true' allowfullscreen='true'
+			style='width: 100%;'>
+				See the Pen <a href='http://codepen.io/r3nya/pen/kXObPr/'>grid__15__elem</a> by Andrew M. (<a href='http://codepen.io/r3nya'>@r3nya</a>) on <a href='http://codepen.io'>CodePen</a>.
+		</iframe>
+	</section>
+
+
 	<section class="slide">
 		<h2>Фиксированный размер и всё остальное</h2>
 		<pre>
@@ -205,11 +222,16 @@
 
 
 	<section class="slide">
+		<h2 class="shout">Разметка вручную 🕶</h2>
+	</section>
+
+
+	<section class="slide">
 		<div class="left">
 			<h2>Грид-линии</h2>
 
 			<pre>
-				<code>.grid {</code>
+				<code>.element {</code>
 				<code class="css">	grid-column-start: 3;</code>
 				<code class="css">	grid-column-end: 4;</code>
 				<code class="css">	grid-row-start: 2;</code>
@@ -248,7 +270,7 @@
 			<h2>Грид-линии</h2>
 
 			<pre>
-				<code>.grid {</code>
+				<code>.element {</code>
 				<code class="css">	grid-column: <mark>3 / 4</mark>;</code>
 				<code class="css">	grid-row: <mark>2 / 4</mark>;</code>
 				<code class="css">}</code>
@@ -274,7 +296,7 @@
 			<h2>Грид-линии</h2>
 
 			<pre>
-				<code>.grid {</code>
+				<code>.element {</code>
 				<code class="css">	grid-column: 3 / 4;</code>
 				<code class="css">	grid-row: 2 / <mark>span</mark> 2;</code>
 				<code class="css">}</code>
@@ -296,11 +318,6 @@
 
 
 	<section class="slide">
-		<h2 class="shout">Разметка вручную 🕶</h2>
-	</section>
-
-
-	<section class="slide">
 		<h2>3 колонки</h2>
 		<pre>
 			<code class="css">.grid {</code>
@@ -318,22 +335,6 @@
 			frameborder='no' allowtransparency='true' allowfullscreen='true'
 			style='width: 100%;'>
 				See the Pen <a href='http://codepen.io/r3nya/pen/RRXWyP/'>grid__columns__trio__default</a> by Andrew M. (<a href='http://codepen.io/r3nya'>@r3nya</a>) on <a href='http://codepen.io'>CodePen</a>.
-		</iframe>
-	</section>
-
-
-	<section class="slide">
-		<pre>
-			<code class="css">.grid { grid-template-columns: <mark>repeat(6, 1fr)</mark>; }</code>
-		</pre>
-
-		<iframe
-			height='390'
-			scrolling='no'
-			src='//codepen.io/r3nya/embed/kXObPr/?height=390&theme-id=light&default-tab=result&embed-version=2'
-			frameborder='no' allowtransparency='true' allowfullscreen='true'
-			style='width: 100%;'>
-				See the Pen <a href='http://codepen.io/r3nya/pen/kXObPr/'>grid__15__elem</a> by Andrew M. (<a href='http://codepen.io/r3nya'>@r3nya</a>) on <a href='http://codepen.io'>CodePen</a>.
 		</iframe>
 	</section>
 
@@ -591,16 +592,16 @@
 
 		<ul>
 			<li>
-                (EN) <a href="https://www.youtube.com/watch?v=Felq4z_rdPQ">Start using CSS Grid Layout</a> - Rachel Andrew
-            </li>
-            <li>
-                (EN)
-                <a href="https://www.youtube.com/watch?v=3M_rbUYtWzk">CSS Grid Layout from the inside out</a> - Manuel Rego, Igalia
-            </li>
-            <li>
-                (RU) <a href="https://www.youtube.com/watch?v=JoRVUILXLxU">Можно вообще всё. Раскладка по гриду</a> - Вадим Макеев
-            </li>
-        </ul>
+				(EN) <a href="https://www.youtube.com/watch?v=Felq4z_rdPQ">Start using CSS Grid Layout</a> - Rachel Andrew
+			</li>
+			<li>
+				(EN)
+				<a href="https://www.youtube.com/watch?v=3M_rbUYtWzk">CSS Grid Layout from the inside out</a> - Manuel Rego, Igalia
+			</li>
+			<li>
+				(RU) <a href="https://www.youtube.com/watch?v=JoRVUILXLxU">Можно вообще всё. Раскладка по гриду</a> - Вадим Макеев
+			</li>
+		</ul>
 	</section>
 
 	<section class="slide" id="bb">
